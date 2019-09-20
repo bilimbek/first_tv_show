@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'tv_show_app/css/style.css' %}">    
+    <script src="{% static 'tv_show_app/js/script.js' %}"></script>
+    <title>Document</title>
+
+</head>
+<body>
+<h1>Where all the shows((((</h1>
+{% for show in all_show %}
+<p> {{show.title}} {{show.description}} {{show.network}}</p>
+{% endfor %}
+</body>
+</html>
